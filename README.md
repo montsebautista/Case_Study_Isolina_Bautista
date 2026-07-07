@@ -321,11 +321,15 @@ stickier, more predictable revenue than one-off traders (Teil 2 Q9).
 Carries forward Teil 1 handling (8.04% duplicate rows dropped, matching
 the Teil 1 finding exactly).
 
-*(Numbering note: the original case study document reuses "Q14" for both
-this section and Teil 3 — likely a typo in the source PDF. Sections below
-are labeled 4.1-4.3 to avoid colliding with Teil 3's Q14.)*
+*(Numbering note: the source PDF labels these questions 14, 15, 16 —
+reusing "14," which was also the last question number in Teil 3. This
+looks like a restart-per-section rather than a true error: Teil 5's own
+questions are printed as 17/18, which only makes arithmetic sense if
+Teil 4 ends at 16. So the numbers below match the PDF exactly; the "14"
+below is a different question from Teil 3's Q14, distinguished by
+section rather than by number.)*
 
-### Q4.1 — Active Sparplans (≥2 executions for the same customer + instrument)
+### Q14 — Active Sparplans (≥2 executions for the same customer + instrument)
 
 **Answer:** only 11.2% of Sparplan starts are ever "active" (≥2
 executions) — checked and confirmed this is real customer behavior, not
@@ -353,7 +357,7 @@ product/onboarding question.
 
 Chart: [`reports/figures/q16_sparplan_execution_frequency.png`](reports/figures/q16_sparplan_execution_frequency.png)
 
-### Q4.2 — Average Amount & Interval
+### Q15 — Average Amount & Interval
 
 **Answer:** median installment is EUR 1.45 (mathematically sound, but
 worth verifying against source system); typical interval clusters around
@@ -381,7 +385,7 @@ configured cadence) remain usable, but any metric computed from
 individual-execution dates (e.g. "days since last execution") is **not
 reliable** and is not reported as such below.
 
-### Q4.3 — Execution Sequence Gaps
+### Q16 — Execution Sequence Gaps
 
 **Answer:** 20.4% of active Sparplans have at least one gap in their
 sequence numbers — real and confirmed, but we can no longer say what it
@@ -394,7 +398,7 @@ predicts (see Finding).
 
 **Finding:** e.g. sequence 1, 2, 3, 4, 9 skipping 5-8 entirely. This part
 is solid, since it only depends on the sequence numbers themselves, not
-on the unreliable date field found in Q4.2.
+on the unreliable date field found in Q15.
 
 **What we can't confirm:** an earlier pass of this analysis claimed gaps
 predict eventual plan dormancy (via "days since last execution"). That
